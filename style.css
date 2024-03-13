@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    
+}
+
+@font-face {
+    font-family: 'Snarsky';
+    src: url('./font/SnarskyOldStyleNarrow.ttf') format('truetype');
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.l-side{
+    width: 35%;
+    background-image: url(image/bg-side.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tl-container{
+    background-color: rgba(49, 54, 64, 50%);
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    padding: 0.8em;
+    margin-top: 6em;
+}
+
+.title{
+    padding-left: 0.5em;
+    font-family: 'Snarsky', sans-serif;
+    letter-spacing: 0.2em;
+}
+
+.r-side{
+    width: 65%;
+    background-color: #E7DECC;
+}
