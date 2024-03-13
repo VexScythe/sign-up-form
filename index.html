@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
     <title>Sign up form</title>
@@ -15,44 +16,44 @@
         </div>
     </div>
     <div class="r-side">
-        <div class="rs-h-text">Gather you party! <br>
-            Create and Share your own Manual and Ruleset! <br>
-            Create your map and venture in your own campain! <br>
-            It's FREE!
+        <div class="rs-h-text1"><h1>Gather you party!</h1>
         </div>
-        <div class="rs-h-text">You <em>know</em> you want to.</div>
+        <div class="rs-h-text2">
+            <p>Create and Share your own Manual and Ruleset! <br>
+            Create your map and venture in your own campaign! <br>
+            It's FREE!</p>
+        </div>
         <div class="form-container">
-            <form action="" method="post">
+            <form novalidate action="" method="post">
                 <div class="form-container-header">
-                    <div class="form-title">Let's do this!</div>
                     <div class="form-row">
                         <div class="element">
                             <label for="first_name">FIRST NAME</label>
-                            <input type="text" id="first_name" name="first_name" required>
+                            <input type="text" id="first_name" name="first_name" data-invalid="false" required>
                         </div>
                         <div class="element">
                             <label for="last_name">LAST NAME</label>
-                            <input type="text" id="last_name" name="last_name" required>
+                            <input type="text" id="last_name" name="last_name" data-invalid="false" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="element">
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" data-invalid="false" required>
                         </div>
                         <div class="element">
                             <label for="phone">PHONE NUMBER</label>
-                            <input type="tel" id="phone" name="phone" min="10" required>
+                            <input type="tel" id="phone" name="phone" min="10" data-invalid="false" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="element">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password" min="8" required>
+                            <input type="password" id="password" name="password" min="8" data-invalid="false" required>
                         </div>
                         <div class="element">
                             <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm-password" name="confirm-password" min="8" required>
+                            <input type="password" id="confirm-password" name="confirm-password" min="8" data-invalid="false" required>
                         </div>
                     </div>
                 </div>

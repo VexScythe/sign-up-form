@@ -6,45 +6,17 @@
 
 :root{
     --text-color:  #313640;
-    --element-shadow: 1px 5px 6px rgba(49, 54, 64, 30%);
+    --element-shadow: 1px 2px 3px rgba(148, 148, 148, 0.3);
     --spacing-ele-rl: 1.2rem;
     --spacing-ele-tb: 0.2rem;
     --label-font-size: 0.6rem;
-    --element-border: 1px solid #313640;
-    --border-radius: 10%;
+    --element-border: 1px solid #aba9a9;
+    --border-radius: 4px;
 }
 
 @font-face {
     font-family: 'Snarsky';
     src: url('./font/SnarskyOldStyleNarrow.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Mononoki';
-    src: url('./font/mononoki-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mononoki';
-    src: url('./font/mononoki-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Mononoki';
-    src: url('./font/mononoki-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Mononoki';
-    src: url('./font/mononoki-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
 }
 
 body,
@@ -55,7 +27,7 @@ html {
 }
 
 .l-side{
-    width: 35%;
+    flex-grow: 1.6;
     background-image: url(image/bg-side.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -79,21 +51,33 @@ html {
 }
 
 .r-side{
-    width: 65%;
-    background-color: #D9C6B0;
+    flex-grow: 3;
+    background-color:#fff;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
+    font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+    justify-content: center;
+    align-items: center;
 }
 
-.rs-h-text{
+.rs-h-text1{
     font-weight: bold;
     margin: var(--spacing-ele-rl);
+    margin-top: 100px;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.rs-h-text2{
+    margin: 0 var(--spacing-ele-rl);
+    margin-bottom: 32px;
+    text-align: center;
 }
 
 .form-container-header{
-    background-color: #E7DECC;
-    box-shadow: var(--element-shadow);
+    
 }
 
 .form-title{
@@ -102,9 +86,12 @@ html {
     padding-top: 1rem;
 }
 
+label{
+    margin-bottom: 4px;
+}
+
 label,
 button {
-    font-family: 'Mononoki', sans-serif;
     font-size: var(--label-font-size);
     font-weight: bold;
     letter-spacing: 1px;
@@ -119,25 +106,77 @@ button {
     flex-direction: column;
     margin: var(--spacing-ele-tb) var(--spacing-ele-rl);
     margin-bottom: 1.2em;
-    border-radius: var(--border-radius);
 }
 
 input{
-    padding: 0.2rem;
-    background-color: #E7DECC;
+    padding: 0.4rem 0.5rem;
+    border-radius: var(--border-radius);
+    border: var(--element-border);
+}
+
+input[data-invalid="true"]{
+    border-color: #7c1616;
+}
+
+input[data-password-notmatched="true"]{
+    border-color: #7c1616;
+}
+
+input:focus{
+    outline: var(--element-border);
+    box-shadow: var(--element-shadow);
 }
 
 .form-container-footer{
+    display: flex;
     margin: var(--spacing-ele-rl);
+    justify-content: center;
 }
 
 button{
-    padding: 0.4rem 2rem;
+    padding: 0.6rem 2rem;
     background-color: #313640;
     color: whitesmoke;
+    border-radius: var(--border-radius);
+    border: var(--element-border);
+    cursor: pointer;
 }
 
 .rs-f-text{
     margin: var(--spacing-ele-rl);
     font-weight: bold;
+}
+
+.error{
+    color: #7c1616;
+    margin-top: 4px;
+    font-size: 0.86rem;
+}
+
+a{
+    color: #313640;
+}
+
+@media (max-width:1100px) {
+    body{
+        flex-direction: column;
+    }
+    .l-side,
+    .r-side{
+        flex: initial;
+    }
+    .l-side{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 40vh;
+    }
+    .tl-container{
+        flex: 1;
+        padding: 0;
+        margin: 0;
+    }
+    .rs-h-text1{
+        margin-top: 1.8rem;
+    }
 }
