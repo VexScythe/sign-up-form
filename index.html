@@ -26,26 +26,38 @@
                 <div class="form-container-header">
                     <div class="form-title">Let's do this!</div>
                     <div class="form-row">
-                        <label for="first_name">First Name</label>
-                        <input type="text" id="first_name" name="first_name" required>
-                        <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name" name="last_name" required>
+                        <div class="element">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" id="first_name" name="first_name" required>
+                        </div>
+                        <div class="element">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
                     </div>
                     <div class="form-row">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" min="10" required>
+                        <div class="element">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="element">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" id="phone" name="phone" min="10" required>
+                        </div>
                     </div>
                     <div class="form-row">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" min="8" required>
-                        <label for="confirm-password">Conferma Password</label>
-                        <input type="password" id="confirm-password" name="confirm-password" min="8" required>
+                        <div class="element">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" id="password" name="password" min="8" required>
+                        </div>
+                        <div class="element">
+                            <label for="confirm-password">CONFIRM PASSWORD</label>
+                            <input type="password" id="confirm-password" name="confirm-password" min="8" required>
+                        </div>
                     </div>
                 </div>
                 <div class="form-container-footer">
-                <button type="submit">Create Account</button>
+                <button id="submit" type="submit">Create Account</button>
                 </div> 
             </form>
         </div>

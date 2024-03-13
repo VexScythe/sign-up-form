@@ -5,12 +5,46 @@
 }
 
 :root{
-    
+    --text-color:  #313640;
+    --element-shadow: 1px 5px 6px rgba(49, 54, 64, 30%);
+    --spacing-ele-rl: 1.2rem;
+    --spacing-ele-tb: 0.2rem;
+    --label-font-size: 0.6rem;
+    --element-border: 1px solid #313640;
+    --border-radius: 10%;
 }
 
 @font-face {
     font-family: 'Snarsky';
     src: url('./font/SnarskyOldStyleNarrow.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Mononoki';
+    src: url('./font/mononoki-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mononoki';
+    src: url('./font/mononoki-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mononoki';
+    src: url('./font/mononoki-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Mononoki';
+    src: url('./font/mononoki-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
 }
 
 body,
@@ -46,5 +80,64 @@ html {
 
 .r-side{
     width: 65%;
+    background-color: #D9C6B0;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.rs-h-text{
+    font-weight: bold;
+    margin: var(--spacing-ele-rl);
+}
+
+.form-container-header{
     background-color: #E7DECC;
+    box-shadow: var(--element-shadow);
+}
+
+.form-title{
+    font-weight: bold;
+    margin: var(--spacing-ele-rl);
+    padding-top: 1rem;
+}
+
+label,
+button {
+    font-family: 'Mononoki', sans-serif;
+    font-size: var(--label-font-size);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.form-row{
+    display: flex;
+}
+
+.element{
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-ele-tb) var(--spacing-ele-rl);
+    margin-bottom: 1.2em;
+    border-radius: var(--border-radius);
+}
+
+input{
+    padding: 0.2rem;
+    background-color: #E7DECC;
+}
+
+.form-container-footer{
+    margin: var(--spacing-ele-rl);
+}
+
+button{
+    padding: 0.4rem 2rem;
+    background-color: #313640;
+    color: whitesmoke;
+}
+
+.rs-f-text{
+    margin: var(--spacing-ele-rl);
+    font-weight: bold;
 }
